@@ -8,17 +8,18 @@ const Div = styled.div `
   flex-direction: column;
 `;
 
-const SpaceImage = styled.img `
-display: block;
-margin-left: auto;
-margin-right: auto;
-width: 50%;
+const Explanation = styled.p `
+  color: dodgerblue;
+  padding: 0% 20% 0% 20%;
+`
+const Title = styled.h1 `
+  color: crimson;
 `
 
 const PictureContainer = props => {
     const [nasaData, setNasaData] = useState([]);
     useEffect(() => {
-        axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
+        axios.get('https://api.nasa.gov/planetary/apod?api_key=jii9K98k8q1uAPm2cnUOZd5W0N1K8AJF4rJVWGzN')
         .then(res => {
             setNasaData(res.data);
           console.log(res.data);
@@ -27,9 +28,10 @@ const PictureContainer = props => {
 
   return (
     <Div className="picture-container">
-      <span className="title">{nasaData.title}</span>
-        <SpaceImage src={nasaData.url}/>
-      <span className="explanation">{nasaData.explanation}</span>
+      <h2>{nasaData.date}</h2>
+      <Title className="title">{nasaData.title}</Title>
+        <Picture url={nasaData.url}/>
+      <Explanation className="explanation">{nasaData.explanation}</Explanation>
     </Div>
   );
 };
