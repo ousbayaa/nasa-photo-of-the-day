@@ -1,6 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import Picture from './Picture';
+import styled from 'styled-components';
+
+const Div = styled.div `
+  display: flex;
+  flex-direction: column;
+`
 
 const PictureContainer = props => {
     const [nasaData, setNasaData] = useState([]);
@@ -13,11 +19,11 @@ const PictureContainer = props => {
       }, []);
 
   return (
-    <div className="picture-container">
+    <Div className="picture-container">
       <span className="title">{nasaData.title}</span>
         <Picture url={nasaData.url}/>
       <span className="explanation">{nasaData.explanation}</span>
-    </div>
+    </Div>
   );
 };
 
