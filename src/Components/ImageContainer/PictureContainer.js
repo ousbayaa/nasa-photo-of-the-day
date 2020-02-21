@@ -6,6 +6,13 @@ import styled from 'styled-components';
 const Div = styled.div `
   display: flex;
   flex-direction: column;
+`;
+
+const SpaceImage = styled.img `
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
 `
 
 const PictureContainer = props => {
@@ -21,7 +28,7 @@ const PictureContainer = props => {
   return (
     <Div className="picture-container">
       <span className="title">{nasaData.title}</span>
-        <Picture url={nasaData.url}/>
+        <SpaceImage src={nasaData.url}/>
       <span className="explanation">{nasaData.explanation}</span>
     </Div>
   );
