@@ -6,6 +6,7 @@ import styled from 'styled-components';
 const Div = styled.div `
   display: flex;
   flex-direction: column;
+  background-image: url("https://images.unsplash.com/photo-1496715976403-7e36dc43f17b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
 `;
 
 const Explanation = styled.p `
@@ -14,6 +15,11 @@ const Explanation = styled.p `
 `
 const Title = styled.h1 `
   color: crimson;
+`
+const Date = styled.h2 `
+  border: 2px outset dodgerblue;
+  border-width: 10px;
+  color: white;
 `
 
 const PictureContainer = props => {
@@ -28,7 +34,7 @@ const PictureContainer = props => {
 
   return (
     <Div className="picture-container">
-      <h2>{nasaData.date}</h2>
+      <Date>{nasaData.date}</Date>
       <Title className="title">{nasaData.title}</Title>
         <Picture url={nasaData.url}/>
       <Explanation className="explanation">{nasaData.explanation}</Explanation>
