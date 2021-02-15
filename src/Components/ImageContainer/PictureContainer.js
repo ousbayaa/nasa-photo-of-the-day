@@ -6,8 +6,6 @@ import styled from 'styled-components';
 const Div = styled.div `
   display: flex;
   flex-direction: column;
-  background-image: url("https://images.unsplash.com/photo-1445905595283-21f8ae8a33d2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=3452&q=80");
-  background-size: 50px;
 `;
 
 const Explanation = styled.p `
@@ -37,7 +35,9 @@ const PictureContainer = props => {
     <Div className="picture-container">
       <Date>{nasaData.date}</Date>
       <Title className="title">{nasaData.title}</Title>
-        <Picture url={nasaData.url}/>
+        <Picture url={nasaData.url}
+                 media_type={nasaData.media_type}
+        />
       <Explanation className="explanation">{nasaData.explanation}</Explanation>
     </Div>
   );
