@@ -6,11 +6,12 @@ import styled from 'styled-components';
 const Div = styled.div `
   display: flex;
   flex-direction: column;
-  background-image: url("https://images.unsplash.com/photo-1496715976403-7e36dc43f17b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
+  background-image: url("https://images.unsplash.com/photo-1445905595283-21f8ae8a33d2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=3452&q=80");
+  background-size: 50px;
 `;
 
 const Explanation = styled.p `
-  color: dodgerblue;
+  color: aqua;
   padding: 0% 20% 0% 20%;
 `
 const Title = styled.h1 `
